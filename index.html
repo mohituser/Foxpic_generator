@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="https://randomfox.ca/floof">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://randomfox.ca/floof"> -->
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        width: 50vw;
+        height: 60vh;
+        margin: auto;
+        /* border: 1px solid red; */
+        text-align: center;
+        margin-top: 5rem;
+background-color: rgba(128, 128, 128, 0.219);
+        background-image: url(https:\/\/randomfox.ca\/images\/4.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        box-shadow: -2px -2px 3px rgba(161, 142, 142, 0.694);
+    }
+    .next{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .next button{
+        padding: 0.5rem 3rem;
+        background-color: rgba(32, 135, 137, 0.71);
+        border-radius: 20px;
+        border: 1px solid rgba(8, 92, 101, 0.858);
+        transition: all 0.3s;
+    }
+    .next button:hover{
+        background-color: rgba(17, 100, 101, 0.71);
+        transform: scale(1.06);
+    }
+</style>
+</head>
+<body>
+    <div class="container" id="container">
+
+    </div>
+    <div class="next" >
+        <button id="next" onclick="img()">Genrate</button>
+    </div>
+    <script>
+        let contain=document.getElementById("container");
+        let i=0; 
+        img();
+        function img(){
+           i= Math.floor(Math.random()*120);
+            contain.style.backgroundImage=`url('https:\/\/randomfox.ca\/images\/${i}.jpg')`;
+    }
+    </script>
+</body>
+</html>
